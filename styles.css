@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FF9AA2;
+    --secondary-color: #FFDAC1;
+    --accent-color: #B5EAD7;
+    --text-color: #444;
+    --light-color: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    background-color: #FFEDF2;
+    color: var(--text-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffedf2' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #FFB7B2 100%);
+    color: var(--light-color);
+    border-radius: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 15px var(--shadow-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%23FFFFFF' opacity='.25'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+.header-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.header h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    font-family: 'Gaegu', cursive;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    opacity: 0.95;
+    font-family: 'Gaegu', cursive;
+}
+
+.intro-message {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    font-size: 1.1em;
+    font-family: 'Gaegu', cursive;
+    line-height: 1.6;
+}
+
+.highlight {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 65%, var(--accent-color) 65%);
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.survey-container {
+    background: var(--light-color);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 6px 15px var(--shadow-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.encouragement-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.encouragement-card {
+    background: var(--light-color);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px var(--shadow-color);
+    transition: all 0.4s ease;
+    text-align: center;
+    border: 2px dashed var(--secondary-color);
+}
+
+.encouragement-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 0 12px 20px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+.card-icon {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.encouragement-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    font-family: 'Gaegu', cursive;
+}
+
+.encouragement-card p {
+    color: var(--text-color);
+    font-size: 1.1em;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    color: var(--text-color);
+}
+
+.footer-message {
+    background-color: var(--accent-color);
+    padding: 15px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    font-family: 'Gaegu', cursive;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* 플로팅 메시지 스타일 */
+.floating-message {
+    position: fixed;
+    bottom: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-family: 'Gaegu', cursive;
+    font-size: 1.1em;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    animation: float-up 5s ease-in-out forwards;
+    max-width: 300px;
+    text-align: center;
+}
+
+@keyframes float-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 30px 20px;
+    }
+
+    .header h1 {
+        font-size: 2.2em;
+    }
+
+    .encouragement-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-message {
+        font-size: 1em;
+    }
+    
+    .floating-message {
+        font-size: 0.9em;
+        max-width: 250px;
+    }
+} 
