@@ -57,28 +57,33 @@ body {
 }
 
 .header h1 {
-    font-size: 2.8em;
+    font-size: 3em;
     margin-bottom: 15px;
     font-family: 'Gaegu', cursive;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
 }
 
 .subtitle {
-    font-size: 1.3em;
+    font-size: 1.6em;
     opacity: 0.95;
     font-family: 'Gaegu', cursive;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
 
 .intro-message {
     background-color: var(--light-color);
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
     box-shadow: 0 4px 10px var(--shadow-color);
-    font-size: 1.1em;
+    font-size: 1.35em;
     font-family: 'Gaegu', cursive;
-    line-height: 1.6;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
 }
 
 .highlight {
@@ -134,13 +139,14 @@ body {
 .encouragement-card h2 {
     color: var(--primary-color);
     margin-bottom: 15px;
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-family: 'Gaegu', cursive;
 }
 
 .encouragement-card p {
     color: var(--text-color);
-    font-size: 1.1em;
+    font-size: 1.25em;
+    line-height: 1.5;
 }
 
 .footer {
@@ -156,7 +162,7 @@ body {
     border-radius: 50px;
     margin-bottom: 15px;
     font-family: 'Gaegu', cursive;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: bold;
 }
 
@@ -166,15 +172,20 @@ body {
     bottom: 30px;
     background-color: var(--primary-color);
     color: white;
-    padding: 12px 20px;
+    padding: 16px 25px;
     border-radius: 50px;
     font-family: 'Gaegu', cursive;
-    font-size: 1.1em;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-size: 1.4em;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     z-index: 100;
     animation: float-up 5s ease-in-out forwards;
-    max-width: 300px;
+    max-width: 350px;
     text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 @keyframes float-up {
@@ -202,7 +213,11 @@ body {
     }
 
     .header h1 {
-        font-size: 2.2em;
+        font-size: 2.5em;
+    }
+    
+    .subtitle {
+        font-size: 1.4em;
     }
 
     .encouragement-section {
@@ -210,11 +225,13 @@ body {
     }
     
     .intro-message {
-        font-size: 1em;
+        font-size: 1.2em;
+        padding: 20px;
     }
     
     .floating-message {
-        font-size: 0.9em;
-        max-width: 250px;
+        font-size: 1.2em;
+        max-width: 300px;
+        padding: 14px 20px;
     }
 } 
