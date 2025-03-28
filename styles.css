@@ -19,6 +19,44 @@ body {
     background-color: #FFEDF2;
     color: var(--text-color);
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffedf2' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    position: relative;
+}
+
+/* 외부 링크 버튼 스타일 */
+.external-link-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.external-link-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    font-size: 1.1em;
+}
+
+.external-link-button i {
+    margin-right: 6px;
+}
+
+.external-link-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #a3dfc9;
+}
+
+.external-link-button:active {
+    transform: translateY(0);
 }
 
 .container {
@@ -233,5 +271,10 @@ body {
         font-size: 1.2em;
         max-width: 300px;
         padding: 14px 20px;
+    }
+    
+    .external-link-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
     }
 } 
